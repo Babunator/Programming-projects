@@ -114,7 +114,7 @@ def hard_bot():
         for col in range(3):
             if board[row][col] == ' ':
                 board[row][col] = bot_symbol
-                current_value = minimax(5, False, -math.inf, math.inf)
+                current_value = minimax(9, False, -math.inf, math.inf)
                 if current_value > best_value:
                     best_value = current_value
                     best_move = [row, col]
@@ -147,8 +147,8 @@ def minimax(depth, is_maximizing, alpha, beta):
                     board[row][col] = ' '
 
                     # alpha beta pruning
-                    if beta <= alpha:
-                        break
+                if beta <= alpha:
+                    break
         return best_value
     # Minimizing player
     else:
@@ -163,8 +163,8 @@ def minimax(depth, is_maximizing, alpha, beta):
                     board[row][col] = ' '
 
                     # alpha beta pruning
-                    if beta <= alpha:
-                        break
+                if beta <= alpha:
+                    break
         return best_value
 
 
@@ -228,10 +228,13 @@ def declare_winner(score, full_board):
 
 
 def check_board_full():
+    empty_fiels = 0
     for row in range(3):
         for col in range(3):
-            if board[row][col] not in [' ', 'X', 'O']:
-                return True
+            if board[row][col] == " ":
+                return False
+
+    return True
 
 
 # _______________________________________________________________________________________________________
