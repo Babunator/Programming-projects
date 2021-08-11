@@ -38,29 +38,30 @@ class Game_setup:
         self.player_card_2 = player_card_2
         self.dealer_card_1 = dealer_card_1
 
-    
-    global all_used_cards
-    global values_cards_player
-    global values_cards_dealer
-
-    def new_game_setup(self)
+    def new_game_setup(self):
         # New game will be setup.
+        global all_used_cards
+        global values_cards_player
+        global values_cards_dealer
         all_used_cards = []
         values_cards_dealer = []
         values_cards_player = []
         
         # Player gets 2 cards at the beginning & 1 new dealer card
-        self.player_card_1 = Cards_Info("","","","","").draw_card()
-        values_cards_player = values_cards_player.append(Cards_Info("","","","","").current_card_value(self))
-        self.player_card_2 = Cards_Info("","","","","").draw_card()
-        values_cards_player = values_cards_player.append(Cards_Info("","","","","").current_card_value(self))
-        self.dealer_card_1 = Cards_Info("","","","","").draw_card()
-        values_cards_dealer = values_cards_dealer.append(Cards_Info("","","","","").current_card_value(self))
+        new_card = Cards_Info("","","","","")
+        self.player_card_1 = new_card.draw_card()
+        values_cards_player.append(new_card.value)
+        new_card = Cards_Info("","","","","")
+        self.player_card_2 = new_card.draw_card()
+        values_cards_player.append(new_card.value)
+        new_card = Cards_Info("","","","","")
+        self.dealer_card_1 = new_card.draw_card()
+        values_cards_dealer.append(new_card.value)
         
     def first_game(self):
         # Explaining rules
-        Print("These are the rules. bla bla bla")
-        new_game_setup()
+        print("These are the rules. bla bla bla")
+        self.new_game_setup()
     
     def ask_new_game(self):
         # Asking if the Player wants to play a new game
@@ -78,6 +79,3 @@ class Game_setup:
                 else:
                     play_again = input("Sorry invalid input. Do you want to play again? Y/N").lower
             
-        
-Game_setup("", "", "").first_game()
-print(values_cards_player)
