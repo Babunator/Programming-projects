@@ -5,7 +5,7 @@ values_cards_dealer = []
 values_cards_player = []
 game_rounds = 1
 
-class Cards_Info:
+class Card_Info:
     def __init__(self, symbol, colour, number, value, current_card):
         self.symbol = symbol
         self.colour = colour
@@ -48,13 +48,13 @@ class Game_setup:
         values_cards_player = []
         
         # Player gets 2 cards at the beginning & 1 new dealer card
-        new_card = Cards_Info("","","","","")
+        new_card = Card_Info("","","","","")
         self.player_card_1 = new_card.draw_card()
         values_cards_player.append(new_card.value)
-        new_card = Cards_Info("","","","","")
+        new_card = Card_Info("","","","","")
         self.player_card_2 = new_card.draw_card()
         values_cards_player.append(new_card.value)
-        new_card = Cards_Info("","","","","")
+        new_card = Card_Info("","","","","")
         self.dealer_card_1 = new_card.draw_card()
         values_cards_dealer.append(new_card.value)
         
