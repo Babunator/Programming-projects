@@ -6,7 +6,7 @@
 - Keep track of the player's total money.
 - Alert the player of wins, losses, or busts, etc...
 
-### Infos Blackjack:
+### Blackjack:
 - The goal of blackjack is to beat the dealer's hand without going over 21.
 - Played with decks of 52 cards
 - To start each round, players place bets 
@@ -21,4 +21,4 @@
   - Surrender: Forfeit half the bet and end the hand immediately. This option is only available at some tables in some casinos, and the option is only available as the first decision.
 -  You can keep asking for more cards until you want to stop or your total hand's score exceeds 21. If you stop at or before 21, the dealer then draws their own cards to try and beat you.
 -  You lose if you exceed 21 or the dealer gets closer to 21 than you do, or if the dealer ties you. You win if you get closer to 21 than the dealer does.
--  
+
