@@ -4,6 +4,7 @@ all_used_cards = []
 values_cards_dealer = []
 values_cards_player = []
 game_rounds = 1
+money = 100
 
 class Card_Info:
     def __init__(self, symbol, colour, number, value, current_card):
@@ -79,4 +80,14 @@ class Game_setup:
                     break
                 else:
                     play_again = input("Sorry invalid input. Do you want to play again? Y/N").lower
-            
+    
+class Betting:
+    def __init__(self,amount):
+        self.amount = amount
+    
+    def give_bet(self):
+        money = money - self.amount
+        return money
+    
+        
+    
