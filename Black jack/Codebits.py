@@ -65,6 +65,7 @@ class Game_setup:
     
     def ask_new_game(self):
         # Asking if the Player wants to play a new game
+        global game_rounds
         if game_rounds > 1:
             play_again = input("Do you want to play again? Y/N").lower
             while true:
