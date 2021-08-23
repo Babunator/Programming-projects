@@ -1,4 +1,5 @@
 # Sources
+- [ python driver/interface for the Lego Mindstorms NXT robot](https://github.com/Eelviny/nxt-python/wiki)
 - [Controlling a raspberry pi with disord](https://www.reddit.com/r/raspberry_pi/comments/hnkl0r/control_your_raspberry_pi_through_discord/)
 - [Python discord bot for raspberry pie](https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi)
 - [Raspberry pie and camera module](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera)
